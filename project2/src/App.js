@@ -1,11 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Panel from './components/Panel.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Wrapper">
+      
+        <div className="Title">
+            <h1>I really like your shirt, homo</h1>
+            <p>thanks dad</p> 
+        </div>
+
+        <div className="Tabs"><h2>TABS</h2></div>
+        <div className="Artboard"><h2>ARBOARD</h2></div>
+        <div className="Artboard-tools">KNAPPEPANEL</div>
+
+
+
+
+
+     
+
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,7 +35,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
