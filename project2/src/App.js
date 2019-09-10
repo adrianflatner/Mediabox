@@ -12,7 +12,7 @@ function App() {
             <p>thanks dad</p> 
         </div>
 
-        <div className="Tabs"><h2>TABS</h2></div>
+        <div className="Tabs"><Panel /></div>
         <div className="Artboard"><h2>ARBOARD</h2></div>
         <div className="Artboard-tools">KNAPPEPANEL</div>
 

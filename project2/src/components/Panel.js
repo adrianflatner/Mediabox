@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+class Panel extends Component {
 
-function knappepanel(){
-    return 0;
+    render(){
+        return(
+            <div>hei</div>
+        )
+    }
 }
 
-export default knappepanel();
+export default Panel;
