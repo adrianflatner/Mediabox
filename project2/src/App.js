@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import placeholder from './components/pictures/placeholder.jpg';
 import './App.css';
 import Navbar from './components/Navbar.js';
 
@@ -13,7 +14,7 @@ function App() {
         </div>
 
         <div className="Navbar"><Navbar /></div>
-        <div className="Artboard"><h2>Biege</h2></div>
+        <div className="Artboard"><img id="placeholder" src={placeholder} alt="placeholder"/></div>
         <div className="Artboard-tools">KNAPPEPANEL</div>
 
 
