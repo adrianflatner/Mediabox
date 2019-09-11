@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Panel from './components/Panel.js';
+import Tools from './components/Tools.js';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
 
         <div className="Tabs"><Panel /></div>
         <div className="Artboard"><h2>ARBOARD</h2></div>
-        <div className="Artboard-tools">KNAPPEPANEL</div>
+        <div className="Artboard-tools"><Tools /></div>
 
 
 
