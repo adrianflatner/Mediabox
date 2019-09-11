@@ -13,8 +13,8 @@ class Tools extends Component {
 
     componentDidMount(){
         $('input[type="checkbox"]').on('change', function() {
-            $('input[type="checkbox"]').not(this).prop('checked', false);
-         });
+            $('input[name="' + this.name + '"]').not(this).prop('checked', false);
+        });
     }
 
     pics = {
@@ -42,47 +42,47 @@ class Tools extends Component {
                 <div id="pictures">
                     <h2>Photos:</h2>
                     <label class="container">{this.pics[1][0]}
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 1"/>
                         <span class="checkmark"></span>
                     </label><br/>
                     
                     <label class="container">{this.pics[2][1]}
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 1"/>
                         <span class="checkmark"></span>
                     </label><br/>
 
                     <label class="container">{this.pics[3][2]}
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 1"/>
                         <span class="checkmark"></span>
                     </label>
                 </div>
                 <div id="sounds">
                     <h2>Sounds:</h2>
                     <label class="container">{this.pics[1][0]}
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 2"/>
                         <span class="checkmark"></span>
                     </label><br/>
                     <label class="container">{this.pics[2][1]}
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 2"/>
                         <span class="checkmark"></span>
                     </label><br/>
                     <label class="container">{this.pics[3][2]}
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 2"/>
                         <span class="checkmark"></span>
                     </label>
                 </div>
                 <div id="quotes">
                     <h3>Quotes:</h3>
                     <label class="container">One
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 3"/>
                         <span class="checkmark"></span>
                     </label><br/>
                     <label class="container">One
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 3"/>
                         <span class="checkmark"></span>
                     </label><br/>
                     <label class="container">One
-                        <input type="checkbox" className="checkbox"/>
+                        <input type="checkbox" className="checkbox" name="group 3"/>
                         <span class="checkmark"></span>
                     </label>
                 </div>
