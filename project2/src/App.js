@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Panel from './components/Panel.js';
+import Navbar from './components/Navbar.js';
 
 function App() {
   return (
@@ -12,12 +12,9 @@ function App() {
             <p>thanks dad</p> 
         </div>
 
-        <div className="Tabs"><Panel /></div>
-        <div className="Artboard"><h2>ARBOARD</h2></div>
+        <div className="Navbar"><Navbar /></div>
+        <div className="Artboard"><h2>Biege</h2></div>
         <div className="Artboard-tools">KNAPPEPANEL</div>
-
-
-
 
 
      
