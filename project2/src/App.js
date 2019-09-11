@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
-import Panel from './components/Panel.js';
 import Tools from './components/Tools.js';
+import placeholder from './components/pictures/placeholder.jpg';
+import './App.css';
+import Navbar from './components/Navbar.js';
 
 function App() {
   return (
@@ -12,12 +14,9 @@ function App() {
             <p>thanks dad</p> 
         </div>
 
-        <div className="Tabs"><Panel /></div>
-        <div className="Artboard"><h2>ARBOARD</h2></div>
+        <div className="Navbar"><Navbar /></div>
+        <div className="Artboard"><img id="placeholder" src={placeholder} alt="placeholder"/></div>
         <div className="Artboard-tools"><Tools /></div>
-
-
-
 
 
      

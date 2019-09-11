@@ -13,21 +13,28 @@
   grid-row: 2/3;
 }
 
-.Tabs{
-  background-color:#3CAEA3;
-  grid-row:4/5
-
-
+.Navbar{
+  grid-row:4/5;
 }
 
 .Artboard{
   background-color: #ED553B;
-  grid-row:5/6
+  grid-row:5/6;
 }
 
 .Artboard-tools{
   background-color:#20639B;
   grid-row:6/7;
   width:70%;
+}
+
+
+.Wrapper{
+  background-color: #173F5F;
+}
+
+
+#placeholder{
+  max-width: 960px;
 }
 
