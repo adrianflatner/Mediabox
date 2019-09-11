@@ -16,8 +16,6 @@
 .Tabs{
   background-color:#3CAEA3;
   grid-row:4/5
-
-
 }
 
 .Artboard{
@@ -31,3 +29,6 @@
   width:70%;
 }
 
+#placeholder{
+  max-width: 960px;
+}
