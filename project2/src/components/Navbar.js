@@ -26,7 +26,7 @@ class Navbar extends Component {
           Richard
         </button>
         <button className="tab3" onClick={() => this.setTab(3, "green")}>
-          Jayden
+          Jaden
         </button>
         <button className="tab4" onClick={() => this.setTab(4)}>
           Michael
