@@ -17,7 +17,7 @@ function App() {
 
         <div className="Navbar"><Navbar /></div>
         <div className="Artboard"><img id="placeholder" src={placeholder} alt="placeholder"/></div>  
-        <div className="Artboard-tools">KNAPPEPANEL</div>
+        <div className="Artboard-tools"><Tools /></div>
 
 
      
