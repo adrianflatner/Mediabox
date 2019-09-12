@@ -19,6 +19,7 @@
 .Artboard{
   background-color: #ED553B;
   grid-row:5/6;
+  width: 70%;
 }
 
 .Artboard-tools{
