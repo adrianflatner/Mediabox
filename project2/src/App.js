@@ -4,6 +4,7 @@ import placeholder from './components/pictures/placeholder.jpg';
 import './App.css';
 import Navbar from './components/Navbar.js';
 
+
 function App() {
   return (
     <div className="Wrapper">
@@ -14,7 +15,7 @@ function App() {
         </div>
 
         <div className="Navbar"><Navbar /></div>
-        <div className="Artboard"><img id="placeholder" src={placeholder} alt="placeholder"/></div>
+        <div className="Artboard"><img id="placeholder" src={placeholder} alt="placeholder"/></div>  
         <div className="Artboard-tools">KNAPPEPANEL</div>
 
 
