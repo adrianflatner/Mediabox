@@ -8,7 +8,9 @@ class Tools extends Component {
     constructor(props){
         super(props);
         this.state = {
-            picture: 1
+            picture: 1,
+            sound: 1,
+            quote: 1
         }
     }
 
@@ -43,7 +45,7 @@ class Tools extends Component {
     render(){
         return(
             <div className="Wrap">
-                <div className="Artboard"><Images activeTab = {this.props.activeTab} activePicture = {this.state.picture} /></div> 
+                <div className="Artboard"><Images activeTab = {this.props.activeTab} activePicture = {this.state.picture} activeSound = {this.state.sound} activeQuote = {this.state.quote} /></div> 
                 <div id="pictures">
                     <h2>Photos:</h2>
                     <label class="container">{this.pics[this.props.activeTab][0]}
