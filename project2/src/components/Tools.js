@@ -19,20 +19,23 @@ class Tools extends Component {
 
     pics = {
         1: ["Joakim", "Halvor", "Adrian"],
-        2: ["H", "if", "kanf", "akfn"],
-        3: ["kfm","knf", "skdf", "kanfs"],
+        2: ["H", "richard stirrer", "kanf"],
+        3: ["kfm","knf", "skdf"],
+        4: ["kfm","knf", "skdf"],
     }
 
     sounds = {
         1: ["Joakim", "Halvor", "Adrian"],
-        2: ["H", "if", "kanf", "akfn"],
-        3: ["kfm","knf", "skdf", "kanfs"],
+        2: ["H", "if", "kanf"],
+        3: ["kfm","knf", "skdf"],
+        4: ["kfm","knf", "skdf"],
     }
     
     quotes = {
         1: ["Joakim", "Halvor", "Adrian"],
-        2: ["H", "if", "kanf", "akfn"],
-        3: ["kfm","knf", "skdf", "kanfs"],
+        2: ["H", "if", "kanf"],
+        3: ["kfm","knf", "skdf"],
+        4: ["kfm","knf", "skdf"],
     }
 
 
@@ -41,47 +44,47 @@ class Tools extends Component {
             <div className="Wrap">
                 <div id="pictures">
                     <h2>Photos:</h2>
-                    <label class="container">{this.pics[1][0]}
+                    <label class="container">{this.pics[this.props.activeTab][0]}
                         <input type="checkbox" className="checkbox" name="group 1"/>
                         <span class="checkmark"></span>
                     </label><br/>
                     
-                    <label class="container">{this.pics[2][1]}
+                    <label class="container">{this.pics[this.props.activeTab][1]}
                         <input type="checkbox" className="checkbox" name="group 1"/>
                         <span class="checkmark"></span>
                     </label><br/>
 
-                    <label class="container">{this.pics[3][2]}
+                    <label class="container">{this.pics[this.props.activeTab][2]}
                         <input type="checkbox" className="checkbox" name="group 1"/>
                         <span class="checkmark"></span>
                     </label>
                 </div>
                 <div id="sounds">
                     <h2>Sounds:</h2>
-                    <label class="container">{this.pics[1][0]}
+                    <label class="container">{this.sounds[this.props.activeTab][0]}
                         <input type="checkbox" className="checkbox" name="group 2"/>
                         <span class="checkmark"></span>
                     </label><br/>
-                    <label class="container">{this.pics[2][1]}
+                    <label class="container">{this.sounds[this.props.activeTab][1]}
                         <input type="checkbox" className="checkbox" name="group 2"/>
                         <span class="checkmark"></span>
                     </label><br/>
-                    <label class="container">{this.pics[3][2]}
+                    <label class="container">{this.sounds[this.props.activeTab][2]}
                         <input type="checkbox" className="checkbox" name="group 2"/>
                         <span class="checkmark"></span>
                     </label>
                 </div>
                 <div id="quotes">
-                    <h3>Quotes:</h3>
-                    <label class="container">One
+                    <h2>Quotes:</h2>
+                    <label class="container">{this.quotes[this.props.activeTab][0]}
                         <input type="checkbox" className="checkbox" name="group 3"/>
                         <span class="checkmark"></span>
                     </label><br/>
-                    <label class="container">One
+                    <label class="container">{this.quotes[this.props.activeTab][1]}
                         <input type="checkbox" className="checkbox" name="group 3"/>
                         <span class="checkmark"></span>
                     </label><br/>
-                    <label class="container">One
+                    <label class="container">{this.quotes[this.props.activeTab][2]}
                         <input type="checkbox" className="checkbox" name="group 3"/>
                         <span class="checkmark"></span>
                     </label>

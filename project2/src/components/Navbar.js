@@ -1,5 +1,7 @@
 import "./Navbar.css";
 import React, { Component } from "react";
+import Tools from './Tools.js';
+import Images from './Images.js';
 
 class Navbar extends Component {
   constructor(props) {
@@ -18,6 +20,7 @@ class Navbar extends Component {
     document.querySelector("div").style.color = this.state.color;
     
     return (
+      <div>
       <div className="grid">
         <button className="tab1" onClick={() => this.setTab(1, "red")}>
           Trump
@@ -32,6 +35,10 @@ class Navbar extends Component {
           Michael
         </button>
       </div>
+          <div className="Artboard"><Images activeTab = {this.state.tab} /></div>  
+          <div className="Artboard-tools"><Tools activeTab = {this.state.tab} /></div>
+      </div>
+       
     );
   }
 }
