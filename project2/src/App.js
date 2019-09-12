@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Tools from './components/Tools.js';
 import Images from './components/Images.js';
-import './App.css';
 import Navbar from './components/Navbar.js';
 
 
