@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import './App.css';
+import Tools from './components/Tools.js';
 import placeholder from './components/pictures/placeholder.jpg';
 import './App.css';
 import Navbar from './components/Navbar.js';
