@@ -1,44 +1,19 @@
 .Wrapper {
   text-align: center;
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   grid-auto-rows: minmax(30px, auto);
 }
 
-
-.Title{
-  color:#707070;
-  grid-row: 2/3;
+.Navbar {
+  grid-row: 4/5;
 }
 
-.Navbar{
-  grid-row:4/5;
-}
-
-.Artboard{
-  background-color: #ED553B;
-  grid-row:5/6;
-  width: 70%;
-}
-
-.Artboard-tools{
-  background-color:#20639B;
-  grid-row:6/7;
-  width:70%;
-}
-
-
-.Wrapper{
-  
-}
-
-
-#placeholder{
+#placeholder {
   max-width: 960px;
 }
 
-body{
+body {
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
-
 }

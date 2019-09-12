@@ -1,22 +1,18 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar.js';
-
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar.js";
 
 function App() {
   return (
     <div className="Wrapper">
-      
-        <div className="Title">
-            <h1>I really like your shirt, homo</h1>
-            <p>thanks dad</p> 
-        </div>
+      <div className="Title">
+        <h1>I really like your shirt, homo</h1>
+        <p>thanks dad</p>
+      </div>
 
-        <div className="Navbar"><Navbar /></div>
-    
-
-
-     
+      <div className="Navbar">
+        <Navbar />
+      </div>
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
