@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Tools.css';
 import $ from 'jquery';
+import Images from './Images.js';
 
 class Tools extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            bar: 1
+            picture: 1
         }
     }
 
@@ -42,6 +43,7 @@ class Tools extends Component {
     render(){
         return(
             <div className="Wrap">
+                <div className="Artboard"><Images activeTab = {this.props.activeTab} activePicture = {this.state.picture} /></div> 
                 <div id="pictures">
                     <h2>Photos:</h2>
                     <label class="container">{this.pics[this.props.activeTab][0]}
