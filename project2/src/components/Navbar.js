@@ -13,10 +13,10 @@ class Navbar extends Component {
   setTab = (tab, color) => {
     this.setState({ tab, color });
   };
-
+  
   render() {
     document.querySelector("div").style.color = this.state.color;
-
+    
     return (
       <div className="grid">
         <button className="tab1" onClick={() => this.setTab(1, "red")}>
