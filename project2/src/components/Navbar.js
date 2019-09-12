@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import React, { Component } from "react";
 import Tools from './Tools.js';
-import Images from './Images.js';
+
 
 class Navbar extends Component {
   constructor(props) {
@@ -34,8 +34,7 @@ class Navbar extends Component {
         <button className="tab4" onClick={() => this.setTab(4)}>
           Michael
         </button>
-      </div>
-          <div className="Artboard"><Images activeTab = {this.state.tab} /></div>  
+      </div> 
           <div className="Artboard-tools"><Tools activeTab = {this.state.tab} /></div>
       </div>
        

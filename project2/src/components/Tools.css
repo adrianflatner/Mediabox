@@ -5,7 +5,13 @@
     justify-items: center;
     grid-auto-rows: minmax(30px, auto);
     grid-template-areas: 
+        'artboard artboard artboard'
         'pictures sounds quotes';
+  }
+
+  .Artboard{
+    grid-area: artboard;
+    width: 100%;
   }
 
   #pictures{
