@@ -13,10 +13,10 @@ class Navbar extends Component {
   setTab = (tab, color) => {
     this.setState({ tab, color });
   };
-
+  
   render() {
     document.querySelector("div").style.color = this.state.color;
-
+    
     return (
       <div className="grid">
         <button className="tab1" onClick={() => this.setTab(1, "red")}>
@@ -26,7 +26,7 @@ class Navbar extends Component {
           Richard
         </button>
         <button className="tab3" onClick={() => this.setTab(3, "green")}>
-          Jayden
+          Jaden
         </button>
         <button className="tab4" onClick={() => this.setTab(4)}>
           Michael
