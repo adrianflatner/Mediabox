@@ -6,10 +6,11 @@ import Images from "./Images.js";
 class Tools extends Component {
   constructor(props) {
     super(props);
+    let start = this.load();
     this.state = {
-      picture: 0,
-      sound: 0,
-      quote: 0
+      picture: start["picture"],
+      sound: start["sound"],
+      quote: start["quote"]
     };
   }
 
@@ -60,9 +61,31 @@ class Tools extends Component {
     3: ["kfm", "knf", "skdf"]
   };
 
+
+  save(){
+    let favourite = {tab: this.props.activeTab, picture: this.state.picture, sound: this.state.sound, quote: this.state.quote};
+    console.log(favourite); 
+    let data = JSON.stringify(favourite);
+    localStorage.setItem("favourite", data);
+    this.load();
+  }
+
+  load(){
+    if(localStorage.getItem("favourite")){
+      let values = localStorage.getItem("favourite");
+      let result = JSON.parse(values);
+      return result;
+    }else{
+      return {tab: 0, picture: 0, sound: 0, quote: 0};
+    }
+
+  }
+
   render() {
     return (
+      
       <div className="Wrap">
+        <button className="Save" onClick={()=>this.save()}>save current combination</button>
         <div className="Artboard">
           <Images
             activeTab={this.props.activeTab}

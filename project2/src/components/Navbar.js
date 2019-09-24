@@ -2,11 +2,13 @@ import "./Navbar.css";
 import React, { Component } from "react";
 import Tools from "./Tools.js";
 
+
 class Navbar extends Component {
   constructor(props) {
     super(props);
+    let startTab = this.load();
     this.state = {
-      tab: 0,
+      tab: startTab,
       color: "#000"
     };
   }
@@ -14,6 +16,15 @@ class Navbar extends Component {
   setTab = (tab, color) => {
     this.setState({ tab, color });
   };
+
+  load(){
+    if(localStorage.getItem("favourite")){
+      let currentTab = JSON.parse(localStorage.getItem("favourite"))["tab"];
+      return currentTab;
+    }else{
+      return 0;
+    }
+  }
 
   render() {
     document.querySelector("div").style.color = this.state.color;
