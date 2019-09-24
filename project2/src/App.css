@@ -10,10 +10,17 @@
   grid-row: 4/5;
 }
 
+
 #placeholder {
   max-width: 960px;
 }
 
 body {
   background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-image:none;
+    background-color: lightblue;
+  }
 }
