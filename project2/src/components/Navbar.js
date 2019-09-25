@@ -18,9 +18,10 @@ class Navbar extends Component {
   };
 
   load(){
-    if(localStorage.getItem("favourite")){
-      let currentTab = JSON.parse(localStorage.getItem("favourite"))["tab"];
-      return currentTab;
+    if(sessionStorage.getItem("current")){
+      return JSON.parse(sessionStorage.getItem("current"))["tab"];
+    }else if(localStorage.getItem("favourite")){
+      return JSON.parse(localStorage.getItem("favourite"))["tab"];
     }else{
       return 0;
     }

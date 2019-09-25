@@ -20,6 +20,7 @@ class Tools extends Component {
         .not(this)
         .prop("checked", false);
     });
+    this.load();
   }
 
   changePicture = stateChange => {
@@ -61,31 +62,52 @@ class Tools extends Component {
     3: ["kfm", "knf", "skdf"]
   };
 
-
-  save(){
-    let favourite = {tab: this.props.activeTab, picture: this.state.picture, sound: this.state.sound, quote: this.state.quote};
-    console.log(favourite); 
+  save() {
+    let favourite = {
+      tab: this.props.activeTab,
+      picture: this.state.picture,
+      sound: this.state.sound,
+      quote: this.state.quote
+    };
     let data = JSON.stringify(favourite);
     localStorage.setItem("favourite", data);
-    this.load();
   }
 
-  load(){
-    if(localStorage.getItem("favourite")){
+  autoSave() {
+    let current = {
+      tab: this.props.activeTab,
+      picture: this.state.picture,
+      sound: this.state.sound,
+      quote: this.state.quote
+    };
+    let session = JSON.stringify(current);
+    sessionStorage.setItem("current", session);
+  }
+
+  load() {
+    if (sessionStorage.getItem("current")) {
+      let autosave = sessionStorage.getItem("current");
+      return JSON.parse(autosave);
+    } else if (localStorage.getItem("favourite")) {
       let values = localStorage.getItem("favourite");
-      let result = JSON.parse(values);
-      return result;
-    }else{
-      return {tab: 0, picture: 0, sound: 0, quote: 0};
+      return JSON.parse(values);
+    } else {
+      return { tab: 0, picture: 0, sound: 0, quote: 0 };
     }
-
   }
-
+  componentDidUpdate(prevState, prevProps) {
+    this.autoSave();
+    console.log(prevState, prevProps);
+  }
   render() {
     return (
-      
       <div className="Wrap">
-        <button className="Save" onClick={()=>this.save()}>save current combination</button>
+        <button className="Save" onClick={() => this.save()}>
+          save current combination
+        </button>
+        <button className="Load" onClick={() => this.load()}>
+          Load saved combination
+        </button>
         <div className="Artboard">
           <Images
             activeTab={this.props.activeTab}
