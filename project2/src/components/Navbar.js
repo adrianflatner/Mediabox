@@ -33,26 +33,12 @@ class Navbar extends Component {
                 Michael
               </button>
             </ul>
+            
+     
+            <div className="Artboard-tools">
+            <Tools activeTab={this.state.tab} />
             </div>
-      //  <div>
-      //   <div className="grid">
-      //     <button className="tab1" onClick={() => this.setTab(0, "red")}>
-      //       Trump
-      //     </button>
-      //     <button className="tab2" onClick={() => this.setTab(1, "blue")}>
-      //       Richard
-      //     </button>
-      //     <button className="tab3" onClick={() => this.setTab(2, "green")}>
-      //       Jaden
-      //     </button>
-      //     <button className="tab4" onClick={() => this.setTab(3)}>
-      //       Michael
-      //     </button>
-      //   </div>
-      //   <div className="Artboard-tools">
-      //     <Tools activeTab={this.state.tab} />
-      //   </div>
-      // </div>
+      </div>
     );
   }
 }
