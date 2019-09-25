@@ -4,16 +4,12 @@ import Navbar from "./components/Navbar.js";
 
 function App() {
   return (
-    <div className="Wrapper">
-      <div className="Title">
-        <h1>I really like your shirt, homo</h1>
-        <p>thanks dad</p>
-      </div>
-
-      <div className="Navbar">
+    <div className="gridLayout">
+      {/* <div className="NavbarBackground"> </div> */}
+      <div className="NavbarGrid">
         <Navbar />
       </div>
-
+   
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

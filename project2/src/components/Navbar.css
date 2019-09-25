@@ -1,8 +1,11 @@
-.grid {
+/* .gridLayout {
+  position:relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 0;
-  justify-content: center;
+  grid-template-columns: 15% 50% 20% 15%;
+  grid-template-rows:10% 70% auto;
+  grid-gap: 1rem 3rem;
+  background-color: #3aafa9;
+  width: 100%;
 }
 
 .grid > button {
@@ -10,10 +13,11 @@
   font-weight: thin;
   color: white;
   margin: 0 70;
-  padding: 15px 60px;
+  padding: 1em;
   text-align: center;
   outline: none;
-}
+} */
+
 
 input,
 button,
@@ -21,7 +25,17 @@ submit {
   border: none;
 }
 
+.LinkWrapper{
+  text-align:center;
+}
+ul{
+  padding:0;
+}
 .tab1 {
+  width:25%;
+  min-width: 60px;
+  cursor:pointer;
+  padding:1em;
   background-image: linear-gradient(
     to right,
     #f46b45 0%,
