@@ -20,17 +20,20 @@ class Images extends PureComponent {
     super(props);
     this.state = {
       picture: "",
-      sound: ""
+      sound: "",
+      quote: ""
     };
   }
 
   componentDidMount = () => {
     this.fetchImage()
     this.fetchSound()
+    this.fetchQuote()
   }
 
   componentDidUpdate = (prevProps) => {
     this.fetchImage()
+    this.fetchQuote()
     if(prevProps.activeTab != this.props.activeTab || prevProps.activeSound != this.props.activeSound){
       this.fetchSound()
     }
@@ -49,9 +52,9 @@ class Images extends PureComponent {
   }
 
   fetchSound = () => {
-    var xx = this.props.activeTab
-    var yy = this.props.activeSound
-    var s = soundPath[xx][yy]
+    var x = this.props.activeTab
+    var y = this.props.activeSound
+    var s = soundPath[x][y]
     this.setState({
       sound: "sounds/" + s
     },function(){
@@ -59,17 +62,32 @@ class Images extends PureComponent {
       this.refs.audio.load();
       this.refs.audio.play();
  })
+  }
 
+  fetchQuote = () => {
+    var x = this.props.activeTab
+    var y = this.props.activeQuote
+    fetch('quotes/quotes.json')
+    .then(res => res.json())
+    .then((q) => {
+      var output = q["person"][x][y]
+      this.setState({
+        quote: output
+      })
+    })
   }
 
   render() {
     return (
       <div>
-        <audio controls autoPlay loop ref="audio">
+        <audio controls loop ref="audio">
           <source src={this.state.sound} type="audio/mpeg" />
         Your browser does not support the audio element.
         </audio>
         <div dangerouslySetInnerHTML={{ __html: this.state.picture}} />
+        <div id="quote">
+          "{this.state.quote}"
+        </div>
       </div>
     );
   }
