@@ -6,8 +6,7 @@ function App() {
   return (
     <div className="Wrapper">
       <div className="Title">
-        <h1>I really like your shirt, homo</h1>
-        <p>thanks dad</p>
+        <h1>Welcome to our Artboard Machine</h1>
       </div>
 
       <div className="Navbar">
