@@ -24,13 +24,13 @@ class Navbar extends Component {
           <button className="tab1" onClick={() => this.setTab(0, "red")}>
             Trump
           </button>
-          <button className="tab2" onClick={() => this.setTab(1, "blue")}>
+          <button className="tab1" onClick={() => this.setTab(1, "blue")}>
             Richard
           </button>
-          <button className="tab3" onClick={() => this.setTab(2, "green")}>
+          <button className="tab1" onClick={() => this.setTab(2, "green")}>
             Jaden
           </button>
-          <button className="tab4" onClick={() => this.setTab(3)}>
+          <button className="tab1" onClick={() => this.setTab(3)}>
             Michael
           </button>
         </div>
