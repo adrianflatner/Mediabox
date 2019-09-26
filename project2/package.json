@@ -1,5 +1,5 @@
 {
-  "homepage" : "http://it2810-08.idi.ntnu.no/prosjekt2",
+  "homepage": "http://it2810-08.idi.ntnu.no/prosjekt2",
   "name": "project2",
   "version": "0.1.0",
   "private": true,
@@ -29,5 +29,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-test-renderer": "^16.9.0"
   }
 }
