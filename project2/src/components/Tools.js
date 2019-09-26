@@ -89,25 +89,27 @@ class Tools extends Component {
     if (sessionStorage.getItem("current")) {
       let autosave = sessionStorage.getItem("current");
       return JSON.parse(autosave);
-    } else if (localStorage.getItem("favourite")) {
-      let values = localStorage.getItem("favourite");
-      return JSON.parse(values);
     } else {
-      return { tab: 0, picture: 0, sound: 0, quote: 0 };
+      return { picture: 0, sound: 0, quote: 0 };
     }
   }
 
   loadFavourite(){
     if(localStorage.getItem("favourite")){
       let favourites = localStorage.getItem("favourite");
-      
+      let data = JSON.parse(favourites);
+      console.log(data)
+      this.setState({ 
+        picture: data["picture"],
+        sound: data["sound"],
+        quote: data["quote"]
+      })
     }
     return;
   }
 
-  componentDidUpdate(prevState, prevProps) {
+  componentDidUpdate() {
     this.autoSave();
-    console.log(prevState, prevProps);
   }
   render() {
     return (

@@ -9,37 +9,35 @@ class Navbar extends Component {
     let startTab = this.load();
     this.state = {
       tab: startTab,
-      color: "#000"
+      saveBtn: false,
+      loadBtn: false,
     };
   }
 
-  setTab = (tab, color) => {
-    this.setState({ tab, color });
+  setTab = (tab) => {
+    this.setState({ tab });
   };
 
   load(){
     if(sessionStorage.getItem("current")){
       return JSON.parse(sessionStorage.getItem("current"))["tab"];
-    }else if(localStorage.getItem("favourite")){
-      return JSON.parse(localStorage.getItem("favourite"))["tab"];
-    }else{
+    }else {
       return 0;
     }
   }
 
   render() {
-    document.querySelector("div").style.color = this.state.color;
 
     return (
       <div>
         <div className="grid">
-          <button className="tab1" onClick={() => this.setTab(0, "red")}>
+          <button className="tab1" onClick={() => this.setTab(0)}>
             Trump
           </button>
-          <button className="tab2" onClick={() => this.setTab(1, "blue")}>
+          <button className="tab2" onClick={() => this.setTab(1)}>
             Richard
           </button>
-          <button className="tab3" onClick={() => this.setTab(2, "green")}>
+          <button className="tab3" onClick={() => this.setTab(2)}>
             Jaden
           </button>
           <button className="tab4" onClick={() => this.setTab(3)}>
