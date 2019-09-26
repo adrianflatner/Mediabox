@@ -1,4 +1,5 @@
 import React, { Component, PureComponent } from "react";
+import "./Images.css";
 
 const imagesPath = [
   ["trump1.svg", "trump2.svg", "trump3.svg"],
@@ -80,14 +81,14 @@ class Images extends PureComponent {
   render() {
     return (
       <div>
-        <audio controls loop ref="audio">
-          <source src={this.state.sound} type="audio/mpeg" />
-        Your browser does not support the audio element.
-        </audio>
         <div dangerouslySetInnerHTML={{ __html: this.state.picture}} />
         <div id="quote">
           "{this.state.quote}"
         </div>
+        <audio controls loop ref="audio">
+          <source src={this.state.sound} type="audio/mpeg" />
+        Your browser does not support the audio element.
+        </audio>
       </div>
     );
   }

@@ -21,16 +21,16 @@ class Navbar extends Component {
     return (
       <div>
         <div className="grid">
-          <button className="tab1" onClick={() => this.setTab(0, "red")}>
+          <button className="tab1" onClick={() => this.setTab(0)}>
             Trump
           </button>
-          <button className="tab1" onClick={() => this.setTab(1, "blue")}>
+          <button className="tab2" onClick={() => this.setTab(1)}>
             Richard
           </button>
-          <button className="tab1" onClick={() => this.setTab(2, "green")}>
+          <button className="tab3" onClick={() => this.setTab(2)}>
             Jaden
           </button>
-          <button className="tab1" onClick={() => this.setTab(3)}>
+          <button className="tab4" onClick={() => this.setTab(3)}>
             Michael
           </button>
         </div>

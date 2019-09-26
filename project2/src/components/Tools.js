@@ -71,7 +71,7 @@ class Tools extends Component {
             activeQuote={this.state.quote}
           />
         </div>
-        <div id="pictures">
+        <div id="pictures" className="textboxes">
           <h2>Photos:</h2>
           <label class="container">
             {this.pics[this.props.activeTab][0]}
@@ -85,7 +85,7 @@ class Tools extends Component {
           </label>
           <br />
 
-          <label class="container">
+          <label class="container" >
             {this.pics[this.props.activeTab][1]}
             <input
               type="checkbox"
@@ -108,7 +108,7 @@ class Tools extends Component {
             <span class="checkmark"></span>
           </label>
         </div>
-        <div id="sounds">
+        <div id="sounds" className="textboxes">
           <h2>Sounds:</h2>
           <label class="container">
             {this.sounds[this.props.activeTab][0]}
@@ -129,7 +129,7 @@ class Tools extends Component {
               name="group 2"
               onChange={() => this.changeSound(1)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <br />
           <label class="container">
@@ -143,7 +143,7 @@ class Tools extends Component {
             <span class="checkmark"></span>
           </label>
         </div>
-        <div id="quotes">
+        <div id="quotes" className="textboxes">
           <h2>Quotes:</h2>
           <label class="container">
             {this.quotes[this.props.activeTab][0]}

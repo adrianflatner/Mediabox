@@ -2,7 +2,6 @@
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
   grid-auto-rows: minmax(30px, auto);
   grid-template-areas:
     "artboard artboard artboard"
@@ -12,6 +11,11 @@
 .Artboard {
   grid-area: artboard;
   width: 100%;
+}
+
+.textboxes{
+  text-align:left;
+  padding-left:30%;
 }
 
 #pictures {
@@ -33,11 +37,13 @@
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 15px;
+  text-align:left;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
 }
 
 /* Hide the browser's default checkbox */
@@ -54,8 +60,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
 }
 
@@ -83,10 +89,10 @@
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  left: 7px;
+  top: 4px;
+  width: 4px;
+  height: 8px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
