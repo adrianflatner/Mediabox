@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Tools.css";
 import $ from "jquery";
 import Images from "./Images.js";
+import Navbar from "./Navbar";
 
 class Tools extends Component {
   constructor(props) {
@@ -95,6 +96,15 @@ class Tools extends Component {
       return { tab: 0, picture: 0, sound: 0, quote: 0 };
     }
   }
+
+  loadFavourite(){
+    if(localStorage.getItem("favourite")){
+      let favourites = localStorage.getItem("favourite");
+      
+    }
+    return;
+  }
+
   componentDidUpdate(prevState, prevProps) {
     this.autoSave();
     console.log(prevState, prevProps);
@@ -105,7 +115,7 @@ class Tools extends Component {
         <button className="Save" onClick={() => this.save()}>
           save current combination
         </button>
-        <button className="Load" onClick={() => this.load()}>
+        <button className="Load" onClick={() => this.loadFavourite()}>
           Load saved combination
         </button>
         <div className="Artboard">
