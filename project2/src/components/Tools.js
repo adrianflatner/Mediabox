@@ -1,17 +1,18 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import "./Tools.css";
 import $ from "jquery";
 import Images from "./Images.js";
 import Navbar from "./Navbar";
 
-class Tools extends Component {
+class Tools extends PureComponent {
   constructor(props) {
     super(props);
     let start = this.load();
     this.state = {
       picture: start["picture"],
       sound: start["sound"],
-      quote: start["quote"]
+      quote: start["quote"],
+      update: false,
     };
   }
 
@@ -42,6 +43,10 @@ class Tools extends Component {
     });
   };
 
+  changeUpdate = stateChange => {
+    this.setState({update: this.state.update ? false : true})
+  }
+
   pics = {
     0: ["Hair", "Retrd", "Smile"],
     1: ["Heisann", "Richard stirrer", "Smile"],
@@ -63,17 +68,7 @@ class Tools extends Component {
     3: ["kfm", "knf", "skdf"]
   };
 
-  save() {
-    let favourite = {
-      tab: this.props.activeTab,
-      picture: this.state.picture,
-      sound: this.state.sound,
-      quote: this.state.quote
-    };
-    let data = JSON.stringify(favourite);
-    localStorage.setItem("favourite", data);
-  }
-
+  
   autoSave() {
     let current = {
       tab: this.props.activeTab,
@@ -83,8 +78,9 @@ class Tools extends Component {
     };
     let session = JSON.stringify(current);
     sessionStorage.setItem("current", session);
+    console.log(this.props.saveBtn)
   }
-
+  
   load() {
     if (sessionStorage.getItem("current")) {
       let autosave = sessionStorage.getItem("current");
@@ -93,7 +89,18 @@ class Tools extends Component {
       return { picture: 0, sound: 0, quote: 0 };
     }
   }
-
+  
+  save() {
+    console.log("hello")
+    let favourite = {
+      tab: this.props.activeTab,
+      picture: this.state.picture,
+      sound: this.state.sound,
+      quote: this.state.quote
+    };
+    let data = JSON.stringify(favourite);
+    localStorage.setItem("favourite", data);
+  }
   loadFavourite(){
     if(localStorage.getItem("favourite")){
       let favourites = localStorage.getItem("favourite");
@@ -105,21 +112,22 @@ class Tools extends Component {
         quote: data["quote"]
       })
     }
-    return;
+    
   }
 
   componentDidUpdate() {
     this.autoSave();
   }
   render() {
+    if(this.props.saveBtn){
+      this.save();
+    }
+    if(this.props.loadBtn){
+      this.loadFavourite();
+    }
     return (
       <div className="Wrap">
-        <button className="Save" onClick={() => this.save()}>
-          save current combination
-        </button>
-        <button className="Load" onClick={() => this.loadFavourite()}>
-          Load saved combination
-        </button>
+        
         <div className="Artboard">
           <Images
             activeTab={this.props.activeTab}
