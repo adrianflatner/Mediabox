@@ -18,24 +18,25 @@
   outline: none;
 } */
 
-
+.NavbarGrid{
+  
+}
 input,
 button,
 submit {
   border: none;
 }
 
-.LinkWrapper{
-  text-align:center;
-}
 ul{
   padding:0;
+  margin:0;
 }
+
 .tab1 {
   width:25%;
   min-width: 60px;
   cursor:pointer;
-  padding:1em;
+  padding: 1em;
   background-image: linear-gradient(
     to right,
     #f46b45 0%,
@@ -43,27 +44,5 @@ ul{
     #f46b45 100%
   );
 }
-.tab2 {
-  background-image: linear-gradient(
-    to right,
-    #005c97 0%,
-    #363795 51%,
-    #005c97 100%
-  );
-}
-.tab3 {
-  background-image: linear-gradient(
-    to right,
-    #e53935 0%,
-    #e35d5b 51%,
-    #e53935 100%
-  );
-}
-.tab4 {
-  background-image: linear-gradient(
-    to right,
-    #673ab7 0%,
-    #512da8 51%,
-    #673ab7 100%
-  );
-}
+
+

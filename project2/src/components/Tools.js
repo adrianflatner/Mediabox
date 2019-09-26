@@ -71,6 +71,7 @@ class Tools extends Component {
             activeQuote={this.state.quote}
           />
         </div>
+
         <div id="pictures">
           <h2>Photos:</h2>
           <label class="container">

@@ -1,29 +1,34 @@
 .Wrap {
+  grid-row:3;
   text-align: center;
+  font-size: 0.5em;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: 1vh 60vh  30vh auto; */
   justify-items: center;
-  grid-auto-rows: minmax(30px, auto);
   grid-template-areas:
-    "artboard artboard artboard"
-    "pictures sounds quotes";
+    ". artboard artboard artboard ."
+    ". pictures sounds quotes .";
 }
 
 .Artboard {
-  grid-area: artboard;
+
   width: 100%;
 }
 
 #pictures {
   grid-area: pictures;
+  grid-row:3;
 }
 
 #sounds {
   grid-area: sounds;
+  grid-row: 3;
 }
 
 #quotes {
   grid-area: quotes;
+  grid-row: 3;
 }
 
 /* Customize the label (the container) */

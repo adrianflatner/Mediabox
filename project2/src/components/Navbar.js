@@ -18,25 +18,29 @@ class Navbar extends Component {
   render() {
     document.querySelector("div").style.color = this.state.color;
 
-    return (<div className="LinkWrapper">
-            <ul>
-              <button className="tab1" onClick={() => this.setTab(0, "red")}>
-                Trump
-              </button>
-              <button className="tab1" onClick={() => this.setTab(1, "blue")}>
-               Richard
-              </button>
-              <button className="tab1" onClick={() => this.setTab(2, "green")}>
-                Jaden
-              </button>
-              <button className="tab1" onClick={() => this.setTab(3)}>
-                Michael
-              </button>
-            </ul>
-            
-     
-            <div className="Artboard-tools">
-            <Tools activeTab={this.state.tab} />
+    return (
+          <div>
+            <div className="LinkWrapper">
+              <ul>
+                <button className="tab1" onClick={() => this.setTab(0, "red")}>
+                  Trump
+                </button>
+                <button className="tab1" onClick={() => this.setTab(1, "blue")}>
+                Richard
+                </button>
+                <button className="tab1" onClick={() => this.setTab(2, "green")}>
+                  Jaden
+                </button>
+                <button className="tab1" onClick={() => this.setTab(3)}>
+                  Michael
+                </button>
+              </ul>
+              </div>
+              {/* Link to artboard and interaction board */}
+              <div className="Artboard-tools">
+                <Tools activeTab={this.state.tab} />
+              </div>
+              
             </div>
       </div>
     );
