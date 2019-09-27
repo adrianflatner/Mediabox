@@ -72,7 +72,7 @@ class Tools extends Component {
           />
         </div>
         <div id="pictures" className="textboxes">
-          <h2>Photos:</h2>
+          <h2 class="h2">Photos:</h2>
           <label class="container">
             {this.pics[this.props.activeTab][0]}
             <input
@@ -109,7 +109,7 @@ class Tools extends Component {
           </label>
         </div>
         <div id="sounds" className="textboxes">
-          <h2>Sounds:</h2>
+          <h2 class="h2">Sounds:</h2>
           <label class="container">
             {this.sounds[this.props.activeTab][0]}
             <input
@@ -144,7 +144,7 @@ class Tools extends Component {
           </label>
         </div>
         <div id="quotes" className="textboxes">
-          <h2>Quotes:</h2>
+          <h2 class="h2">Quotes:</h2>
           <label class="container">
             {this.quotes[this.props.activeTab][0]}
             <input

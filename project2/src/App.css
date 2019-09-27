@@ -2,7 +2,6 @@
   text-align: center;
   display: grid;
   grid-template-columns: 25vw 50vw 25vw;
-  justify-items: center;
   grid-auto-rows: minmax(30px, auto);
   margin:auto;
   font-family: futura;
@@ -12,6 +11,7 @@
   color: #c0b283
 }
 .Navbar {
+  width:100%;
   grid-row: 2/3;
   grid-column: 2/3;
 }
@@ -24,19 +24,33 @@ body {
   background-color:#F4F4F4;
 }
 
-@media all and (max-width: 960px) { 
-  body{
-    background-color: beige;
-    background-image:none;
-    grid-template-columns:100vw;
-  }
-  .Navbar{
-    grid-column:1/4;
-  }
+@media all and (max-width: 960px) {
  }
 @media all and (max-width: 768px) { 
-
 }
+
+/* LANDSCAPE MODE FOR MOBILE */
+@media all and (max-height: 480px) and (orientation: landscape) { 
+  .Wrapper{
+    grid-template-columns:100vw;
+  }
+  .Title{
+    grid-column: 1/2;
+  }
+  .Navbar{
+    grid-column:1/2;
+  }
+ }
+
 @media all and (max-width: 480px) { 
-
+  .Wrapper{
+    grid-template-columns:100vw;
+  }
+  .Title{
+    grid-column: 1/2;
+  }
+  .Navbar{
+    grid-column:1/2;
+  }
 }
+
