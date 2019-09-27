@@ -6,6 +6,8 @@
   grid-template-areas:
     "artboard artboard artboard"
     "pictures sounds quotes";
+  background-color: #373737;
+  color:#F4F4F4;
 }
 
 .Artboard {
@@ -21,14 +23,19 @@
 
 #pictures {
   grid-area: pictures;
+  border-right: 2px solid #F4F4F4;
+  border-top: 2px solid #F4F4F4;
 }
 
 #sounds {
   grid-area: sounds;
+  border-right: 2px solid #F4F4F4;
+  border-top: 2px solid #F4F4F4;
 }
 
 #quotes {
   grid-area: quotes;
+  border-top: 2px solid #F4F4F4;
 }
 
 /* Customize the label (the container) */
