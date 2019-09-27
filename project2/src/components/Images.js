@@ -41,8 +41,8 @@ class Images extends PureComponent {
     this.fetchImage();
     this.fetchQuote();
     if (
-      prevProps.activeTab != this.props.activeTab ||
-      prevProps.activeSound != this.props.activeSound
+      prevProps.activeTab !== this.props.activeTab ||
+      prevProps.activeSound !== this.props.activeSound
     ) {
       this.fetchSound();
     }
