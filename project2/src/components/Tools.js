@@ -121,9 +121,11 @@ class Tools extends PureComponent {
   render() {
     if(this.props.saveBtn){
       this.save();
+      this.props.toggleSaveBtn();
     }
     if(this.props.loadBtn){
       this.loadFavourite();
+      this.props.toggleLoadBtn();
     }
     return (
       <div className="Wrap">

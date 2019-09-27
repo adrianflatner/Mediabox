@@ -75,7 +75,7 @@ class Navbar extends Component {
           </button>
         </div>
         <div className="Artboard-tools">
-          <Tools activeTab={this.state.tab} saveBtn={this.state.saveBtn} loadBtn={this.state.loadBtn}/>
+          <Tools toggleSaveBtn={this.toggleSaveBtn} toggleLoadBtn={this.toggleLoadBtn} activeTab={this.state.tab} saveBtn={this.state.saveBtn} loadBtn={this.state.loadBtn}/>
         </div>
       </div>
     );
