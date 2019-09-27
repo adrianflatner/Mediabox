@@ -2,11 +2,6 @@
 
 # REACT
 
-være basert på react
-bruk ES6 og vis bruk av både komponentene med class og funksjonelle komponenter. Hensiktsmessig komponentstruktur
-Bruk ordinær mekanisme for å sette state
-UI-komponentene skal implementeres fra bunnen av
-
 Prosjektet ble startet ved hjelp av create-react-app. Fra dette har vi lagd alle komponentene og UI-elementene fra bunnen av. Nettsiden benytter seg av tre komponenter: Navbar, Tools, og Media. Navbar ligger øverst i hierarkiet og inneholder logikk for navbaren øverst på siden, samt knappene for lagring og henting av favorittkombinasjon. Tools-komponenten rendres av Navbar og inneholder logikk for lagring av staten til komponenten i både session- og localStorage, samt behandler all informasjonen fra kontrollpanelet nederst på siden. Nederst i hierarkiet har vi Media. 
 
 Vi har valgt å strukturere komponentene slik for å gjøre det enkelt å endre states, samt sende props videre nedover. Andre plasseringer av f.eks. knappene for lagring gjorde det vanskeligere å endre state i navbar siden informasjonen ikke kan enkelt sendes fra en child til parent component. 
