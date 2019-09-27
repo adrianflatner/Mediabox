@@ -1,0 +1,18 @@
+<svg width="888" height="500.00000000000006" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="#373737" id="canvas_background" height="502" width="890" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="50" id="svg_2" y="117.80413" x="170.759151" stroke-width="0" stroke="#000" fill="#000000">Welcome to our website!</text>
+  <text transform="matrix(1,0,0,1,0,0) " stroke="#000" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="37" id="svg_3" y="305.928976" x="263.158261" stroke-width="0" fill="#000000">Please click a tab above</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="37" id="svg_4" y="352.930716" x="299.455304" stroke-width="0" stroke="#000" fill="#000000">to start enjoying our</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="37" id="svg_5" y="406.055772" x="407.991759" stroke-width="0" stroke="#000" fill="#000000">gallery</text>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="37" id="svg_6" y="464.417314" x="451.211264" stroke-width="0" stroke="#000" fill="#000000">:)</text>
+ </g>
+</svg>

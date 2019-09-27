@@ -1,8 +1,8 @@
-import React, { Component, PureComponent } from "react";
+import React, { PureComponent } from "react";
 import "./Tools.css";
 import $ from "jquery";
 import Images from "./Images.js";
-import Navbar from "./Navbar";
+
 
 class Tools extends PureComponent {
   constructor(props) {
@@ -49,22 +49,22 @@ class Tools extends PureComponent {
   pics = {
     0: ["What", "Weird", "Smile"],
     1: ["Bro", "Pose", "Couple"],
-    2: ["Gden", "Water", "Red glove"],
+    2: ["Gden", "Water", "Red gloves"],
     3: ["Don't", "Turban", "Sup ladies"]
   };
 
   sounds = {
-    0: ["Chuch", "Grab pussy", "Church"],
-    1: ["Terning ned", "Klikker", "Waves"],
-    2: ["Shhh", "Click", "Sup"],
-    3: ["Whistle", "Lava", "Blow"]
+    0: ["Really Smart", "Bing Bing", "Jobs"],
+    1: ["Tre gode ting", "Richardo", "ClubMix"],
+    2: ["Under water", "River", "Rain"],
+    3: ["Bells", "Lava", "Rain on roof"]
   };
 
   quotes = {
     0: ["Ivanka", "Jobs", "Fingers"],
     1: ["Fresh", "Terning ned", "Bucket list"],
     2: ["Mirrors", "Jupiter", "Asleep"],
-    3: ["Stitious", "Whatsoever", "Kids"]
+    3: ["Stitious", "Don't do anything", "Kids"]
   };
 
   autoSave() {
