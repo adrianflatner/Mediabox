@@ -12,7 +12,6 @@ class Tools extends PureComponent {
       picture: start["picture"],
       sound: start["sound"],
       quote: start["quote"],
-      update: false,
     };
   }
 
@@ -44,8 +43,8 @@ class Tools extends PureComponent {
   };
 
   changeUpdate = stateChange => {
-    this.setState({update: this.state.update ? false : true})
-  }
+    this.setState({ update: this.state.update ? false : true });
+  };
 
   pics = {
     0: ["Hair", "Retrd", "Smile"],
@@ -68,7 +67,6 @@ class Tools extends PureComponent {
     3: ["kfm", "knf", "skdf"]
   };
 
-  
   autoSave() {
     let current = {
       tab: this.props.activeTab,
@@ -78,9 +76,8 @@ class Tools extends PureComponent {
     };
     let session = JSON.stringify(current);
     sessionStorage.setItem("current", session);
-    console.log(this.props.saveBtn)
   }
-  
+
   load() {
     if (sessionStorage.getItem("current")) {
       let autosave = sessionStorage.getItem("current");
@@ -89,9 +86,8 @@ class Tools extends PureComponent {
       return { picture: 0, sound: 0, quote: 0 };
     }
   }
-  
+
   save() {
-    console.log("hello")
     let favourite = {
       tab: this.props.activeTab,
       picture: this.state.picture,
@@ -101,35 +97,32 @@ class Tools extends PureComponent {
     let data = JSON.stringify(favourite);
     localStorage.setItem("favourite", data);
   }
-  loadFavourite(){
-    if(localStorage.getItem("favourite")){
+  loadFavourite() {
+    if (localStorage.getItem("favourite")) {
       let favourites = localStorage.getItem("favourite");
       let data = JSON.parse(favourites);
-      console.log(data)
-      this.setState({ 
+      this.setState({
         picture: data["picture"],
         sound: data["sound"],
         quote: data["quote"]
-      })
+      });
     }
-    
   }
 
   componentDidUpdate() {
     this.autoSave();
   }
   render() {
-    if(this.props.saveBtn){
+    if (this.props.saveBtn) {
       this.save();
       this.props.toggleSaveBtn();
     }
-    if(this.props.loadBtn){
+    if (this.props.loadBtn) {
       this.loadFavourite();
       this.props.toggleLoadBtn();
     }
     return (
       <div className="Wrap">
-        
         <div className="Artboard">
           <Images
             activeTab={this.props.activeTab}

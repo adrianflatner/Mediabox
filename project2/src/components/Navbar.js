@@ -2,7 +2,6 @@ import "./Navbar.css";
 import React, { Component } from "react";
 import Tools from "./Tools.js";
 
-
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -17,41 +16,41 @@ class Navbar extends Component {
     this.toggleLoadBtn = this.toggleLoadBtn.bind(this);
   }
 
-  setTab = (tab) => {
+  setTab = tab => {
     this.setState({ tab });
   };
 
-  toggleSaveBtn (){
-    this.setState(state =>({ saveBtn: !state.saveBtn }))
+  toggleSaveBtn() {
+    this.setState(state => ({ saveBtn: !state.saveBtn }));
   }
-  toggleLoadBtn (){
-    this.setState(state =>({ loadBtn: !state.loadBtn }))
+  toggleLoadBtn() {
+    this.setState(state => ({ loadBtn: !state.loadBtn }));
   }
- 
 
-  load(){
-    if(sessionStorage.getItem("current")){
+  load() {
+    if (sessionStorage.getItem("current")) {
       return JSON.parse(sessionStorage.getItem("current"))["tab"];
-    }else {
+    } else {
       return 0;
     }
-  } 
-  
+  }
+
   save = () => {
     this.toggleSaveBtn();
-    
-  }
+  };
 
   loadFavourite = () => {
-    this.toggleLoadBtn();
-    let favTab = localStorage.getItem("favourite")
-    let tab = JSON.parse(favTab)["tab"]
-    this.setTab(tab)
-
-  }
+    if (localStorage.getItem("favourite")) {
+      this.toggleLoadBtn();
+      let favTab = localStorage.getItem("favourite");
+      let tab = JSON.parse(favTab)["tab"];
+      this.setTab(tab);
+    } else {
+      alert("You haven't saved a combination yet!");
+    }
+  };
 
   render() {
-
     return (
       <div>
         <button className="Save" onClick={() => this.save()}>
@@ -75,7 +74,13 @@ class Navbar extends Component {
           </button>
         </div>
         <div className="Artboard-tools">
-          <Tools toggleSaveBtn={this.toggleSaveBtn} toggleLoadBtn={this.toggleLoadBtn} activeTab={this.state.tab} saveBtn={this.state.saveBtn} loadBtn={this.state.loadBtn}/>
+          <Tools
+            toggleSaveBtn={this.toggleSaveBtn}
+            toggleLoadBtn={this.toggleLoadBtn}
+            activeTab={this.state.tab}
+            saveBtn={this.state.saveBtn}
+            loadBtn={this.state.loadBtn}
+          />
         </div>
       </div>
     );
