@@ -1,8 +1,8 @@
-import React, { Component, PureComponent } from "react";
+import React, { PureComponent } from "react";
 import "./Tools.css";
 import $ from "jquery";
 import Images from "./Images.js";
-import Navbar from "./Navbar";
+
 
 class Tools extends PureComponent {
   constructor(props) {
@@ -12,7 +12,6 @@ class Tools extends PureComponent {
       picture: start["picture"],
       sound: start["sound"],
       quote: start["quote"],
-      update: false,
     };
   }
 
@@ -44,31 +43,30 @@ class Tools extends PureComponent {
   };
 
   changeUpdate = stateChange => {
-    this.setState({update: this.state.update ? false : true})
-  }
+    this.setState({ update: this.state.update ? false : true });
+  };
 
   pics = {
     0: ["What", "Weird", "Smile"],
     1: ["Bro", "Pose", "Couple"],
-    2: ["Gden", "Water", "Red glove"],
+    2: ["Gden", "Water", "Red gloves"],
     3: ["Don't", "Turban", "Sup ladies"]
   };
 
   sounds = {
-    0: ["Chuch", "Grab pussy", "Church"],
-    1: ["Terning ned", "Klikker", "Waves"],
-    2: ["Shhh", "Click", "Sup"],
-    3: ["Whistle", "Lava", "Blow"]
+    0: ["Really Smart", "Bing Bing", "Jobs"],
+    1: ["Tre gode ting", "Richardo", "ClubMix"],
+    2: ["Under water", "River", "Rain"],
+    3: ["Bells", "Lava", "Rain on roof"]
   };
 
   quotes = {
     0: ["Ivanka", "Jobs", "Fingers"],
     1: ["Fresh", "Terning ned", "Bucket list"],
     2: ["Mirrors", "Jupiter", "Asleep"],
-    3: ["Stitious", "Whatsoever", "Kids"]
+    3: ["Stitious", "Don't do anything", "Kids"]
   };
 
-  
   autoSave() {
     let current = {
       tab: this.props.activeTab,
@@ -78,9 +76,8 @@ class Tools extends PureComponent {
     };
     let session = JSON.stringify(current);
     sessionStorage.setItem("current", session);
-    console.log(this.props.saveBtn)
   }
-  
+
   load() {
     if (sessionStorage.getItem("current")) {
       let autosave = sessionStorage.getItem("current");
@@ -89,9 +86,8 @@ class Tools extends PureComponent {
       return { picture: 0, sound: 0, quote: 0 };
     }
   }
-  
+
   save() {
-    console.log("hello")
     let favourite = {
       tab: this.props.activeTab,
       picture: this.state.picture,
@@ -101,36 +97,33 @@ class Tools extends PureComponent {
     let data = JSON.stringify(favourite);
     localStorage.setItem("favourite", data);
   }
-  loadFavourite(){
-    if(localStorage.getItem("favourite")){
+  loadFavourite() {
+    if (localStorage.getItem("favourite")) {
       let favourites = localStorage.getItem("favourite");
       let data = JSON.parse(favourites);
-      console.log(data)
-      this.setState({ 
+      this.setState({
         picture: data["picture"],
         sound: data["sound"],
         quote: data["quote"]
-      })
+      });
     }
-    
   }
 
   componentDidUpdate() {
     this.autoSave();
   }
   render() {
-    if(this.props.saveBtn){
+    if (this.props.saveBtn) {
       this.save();
       this.props.toggleSaveBtn();
     }
-    if(this.props.loadBtn){
+    if (this.props.loadBtn) {
       this.loadFavourite();
       this.props.toggleLoadBtn();
       $('input[type="checkbox"]').prop("checked", false);
     }
     return (
       <div className="Wrap">
-        
         <div className="Artboard">
           <Images
             activeTab={this.props.activeTab}

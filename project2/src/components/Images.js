@@ -9,10 +9,10 @@ const imagesPath = [
 ];
 
 const soundPath = [
-  ["church.mp3", "lava.mp3", "rain.mp3"],
-  ["mix.mp3", "ugotthat.mp3", "ocean.mp3"],
-  ["underwater.mp3", "water.mp3", "sda"],
-  ["isfj", "safija", "safjask"]
+  ["trumpimreallysmart.mp3", "trumpbingbing.mp3", "trumpgreatestjobspresident.mp3"],
+  ["richardtregodeting.mp3", "ugotthat.mp3", "mix.mp3"],
+  ["underwater.mp3", "water.mp3", "ocean.mp3"],
+  ["church.mp3", "lava.mp3", "rain.mp3"]
 ];
 
 class Images extends PureComponent {
