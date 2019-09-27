@@ -24,11 +24,19 @@ body {
   background-color:#F4F4F4;
 }
 
-@media only screen and (max-width: 960px) {
+@media all and (max-width: 960px) { 
   body{
-    background-color: black;
+    background-color: beige;
     background-image:none;
     grid-template-columns:100vw;
-    
+  }
+  .Navbar{
+    grid-column:1/4;
+  }
  }
+@media all and (max-width: 768px) { 
+
+}
+@media all and (max-width: 480px) { 
+
 }
