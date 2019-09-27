@@ -138,8 +138,8 @@ class Tools extends PureComponent {
             activeQuote={this.state.quote}
           />
         </div>
-        <div id="pictures">
-          <h2>Photos:</h2>
+        <div id="pictures" className="textboxes">
+          <h2 class="h2">Photos:</h2>
           <label class="container">
             {this.pics[this.props.activeTab][0]}
             <input
@@ -152,7 +152,7 @@ class Tools extends PureComponent {
           </label>
           <br />
 
-          <label class="container">
+          <label class="container" >
             {this.pics[this.props.activeTab][1]}
             <input
               type="checkbox"
@@ -175,8 +175,8 @@ class Tools extends PureComponent {
             <span class="checkmark"></span>
           </label>
         </div>
-        <div id="sounds">
-          <h2>Sounds:</h2>
+        <div id="sounds" className="textboxes">
+          <h2 class="h2">Sounds:</h2>
           <label class="container">
             {this.sounds[this.props.activeTab][0]}
             <input
@@ -196,7 +196,7 @@ class Tools extends PureComponent {
               name="group 2"
               onChange={() => this.changeSound(1)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <br />
           <label class="container">
@@ -210,8 +210,8 @@ class Tools extends PureComponent {
             <span class="checkmark"></span>
           </label>
         </div>
-        <div id="quotes">
-          <h2>Quotes:</h2>
+        <div id="quotes" className="textboxes">
+          <h2 class="h2">Quotes:</h2>
           <label class="container">
             {this.quotes[this.props.activeTab][0]}
             <input
