@@ -1,6 +1,6 @@
 # Project 2 Documentasjon
 
-#REACT
+# REACT
 
 være basert på react
 bruk ES6 og vis bruk av både komponentene med class og funksjonelle komponenter. Hensiktsmessig komponentstruktur
