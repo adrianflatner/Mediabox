@@ -28,7 +28,6 @@ class Images extends PureComponent {
 
   componentDidMount = () => {
     this.fetchImage()
-    this.fetchSound()
     this.fetchQuote()
   }
 
