@@ -16,13 +16,13 @@ exports[`App render matches snapshot 1`] = `
   >
     <div>
       <button
-        className="Save"
+        className="Save SaveLoad"
         onClick={[Function]}
       >
-        save current combination
+        Save current combination
       </button>
       <button
-        className="Load"
+        className="Load SaveLoad"
         onClick={[Function]}
       >
         Load saved combination
@@ -103,7 +103,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Hair
+              What
               <input
                 className="checkbox"
                 name="group 1"
@@ -118,7 +118,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Retrd
+              Weird
               <input
                 className="checkbox"
                 name="group 1"
@@ -157,7 +157,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Ueeaa
+              Chuch
               <input
                 className="checkbox"
                 name="group 2"
@@ -211,7 +211,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Joakim
+              Ivanka
               <input
                 className="checkbox"
                 name="group 3"
@@ -226,7 +226,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Halvor
+              Jobs
               <input
                 className="checkbox"
                 name="group 3"
@@ -241,7 +241,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Adrian
+              Fingers
               <input
                 className="checkbox"
                 name="group 3"
