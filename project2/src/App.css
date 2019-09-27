@@ -1,3 +1,4 @@
+/* WRAPPER FOR CONTENT */
 .Wrapper {
   text-align: center;
   display: grid;
@@ -16,20 +17,12 @@
   grid-column: 2/3;
 }
 
-#placeholder {
-  max-width: 960px;
-}
-
 body {
   background-color:#F4F4F4;
 }
 
-@media all and (max-width: 960px) {
- }
-@media all and (max-width: 768px) { 
-}
 
-/* LANDSCAPE MODE FOR MOBILE */
+/* Landscape for mobile */
 @media all and (max-height: 480px) and (orientation: landscape) { 
   .Wrapper{
     grid-template-columns:100vw;
@@ -42,6 +35,7 @@ body {
   }
  }
 
+/* New grid for mobile */
 @media all and (max-width: 480px) { 
   .Wrapper{
     grid-template-columns:100vw;

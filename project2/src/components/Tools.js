@@ -47,24 +47,24 @@ class Tools extends PureComponent {
   };
 
   pics = {
-    0: ["Hair", "Retrd", "Smile"],
-    1: ["Heisann", "Richard stirrer", "Smile"],
-    2: ["Gden", "Smile", "Gayden"],
-    3: ["Vsaus", "Mikael", "Sup ladies"]
+    0: ["What", "Weird", "Smile"],
+    1: ["Bro", "Pose", "Couple"],
+    2: ["Gden", "Water", "Red glove"],
+    3: ["Don't", "Turban", "Sup ladies"]
   };
 
   sounds = {
-    0: ["Ueeaa", "Grab pussy", "Church"],
+    0: ["Chuch", "Grab pussy", "Church"],
     1: ["Terning ned", "Klikker", "Waves"],
     2: ["Shhh", "Click", "Sup"],
     3: ["Whistle", "Lava", "Blow"]
   };
 
   quotes = {
-    0: ["Joakim", "Halvor", "Adrian"],
-    1: ["Terning opp", "Enkelt og greit", "Frickin fresh"],
-    2: ["kfm", "knf", "skdf"],
-    3: ["kfm", "knf", "skdf"]
+    0: ["Ivanka", "Jobs", "Fingers"],
+    1: ["Fresh", "Terning ned", "Bucket list"],
+    2: ["Mirrors", "Jupiter", "Asleep"],
+    3: ["Stitious", "Whatsoever", "Kids"]
   };
 
   autoSave() {

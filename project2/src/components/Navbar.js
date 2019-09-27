@@ -52,12 +52,13 @@ class Navbar extends Component {
 
   render() {
     return (
+      // NAVIGATIONBUTTONS
       <div>
-        <button className="Save" onClick={() => this.save()}>
-          save current combination
+        <button className="Save SaveLoad" onClick={() => this.save()}>
+          Save current combination
         </button>
-        <button className="Load" onClick={() => this.loadFavourite()}>
-          Load saved combination
+        <button className="Load SaveLoad" onClick={() => this.loadFavourite()}>
+          Load saved combination             
         </button>
         <div className="grid">
           <button className="tab1" onClick={() => this.setTab(0)}>
@@ -73,6 +74,8 @@ class Navbar extends Component {
             Michael
           </button>
         </div>
+
+      {/* PICTURE AND BUTTONS FOR MAKING ARTBOART */}
         <div className="Artboard-tools">
           <Tools
             toggleSaveBtn={this.toggleSaveBtn}

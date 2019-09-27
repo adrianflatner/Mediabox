@@ -6,12 +6,10 @@
   grid-template-areas:
     "artboard artboard artboard"
     "pictures sounds quotes";
+  background-color: #373737;
+  color:#F4F4F4;
 }
-/* .LandscapeGrid{
-  grid-auto-columns: 2/3;
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-} */
+
 .Artboard {
   grid-area: artboard;
   width: 100%;
@@ -25,14 +23,19 @@
 
 #pictures {
   grid-area: pictures;
+  border-right: 2px solid #F4F4F4;
+  border-top: 2px solid #F4F4F4;
 }
 
 #sounds {
   grid-area: sounds;
+  border-right: 2px solid #F4F4F4;
+  border-top: 2px solid #F4F4F4;
 }
 
 #quotes {
   grid-area: quotes;
+  border-top: 2px solid #F4F4F4;
 }
 
 /* Customize the label (the container) */
@@ -45,11 +48,6 @@
   cursor: pointer;
   font-size: 14px;
   text-align:left;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
 }
 @media all and (max-width: 768px) { 
   .h2{
@@ -74,20 +72,6 @@
   padding-left:10%;
 }
 }
-
-/* @media all and (max-height: 480px) and (orientation: landscape) { 
-  
-  .Wrap{
-    grid-template-columns: 50vw 50vw;
-
-  }
-  .Artboard{
-    grid-column:1/2;
-  }
-  .textboxes{
-    grid-area:1/2;
-  }
-  } */
 
 /* Hide the browser's default checkbox */
 .container input {
