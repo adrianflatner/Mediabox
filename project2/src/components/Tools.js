@@ -120,6 +120,7 @@ class Tools extends PureComponent {
     if (this.props.loadBtn) {
       this.loadFavourite();
       this.props.toggleLoadBtn();
+      $('input[type="checkbox"]').prop("checked", false);
     }
     return (
       <div className="Wrap">
