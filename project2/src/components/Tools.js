@@ -3,7 +3,6 @@ import "./Tools.css";
 import $ from "jquery";
 import Images from "./Images.js";
 
-
 class Tools extends PureComponent {
   constructor(props) {
     super(props);
@@ -11,10 +10,11 @@ class Tools extends PureComponent {
     this.state = {
       picture: start["picture"],
       sound: start["sound"],
-      quote: start["quote"],
+      quote: start["quote"]
     };
   }
 
+  // Checks session storage when the page is loaded and initializes the checkboxes
   componentDidMount() {
     $('input[type="checkbox"]').on("change", function() {
       $('input[name="' + this.name + '"]')
@@ -24,6 +24,7 @@ class Tools extends PureComponent {
     this.load();
   }
 
+  // Functions for chaning picture, sound, and quote states
   changePicture = stateChange => {
     this.setState({
       picture: stateChange
@@ -46,6 +47,7 @@ class Tools extends PureComponent {
     this.setState({ update: this.state.update ? false : true });
   };
 
+  // Arrays for checkbox-labels
   pics = {
     0: ["What", "Weird", "Smile"],
     1: ["Bro", "Pose", "Couple"],
@@ -67,6 +69,7 @@ class Tools extends PureComponent {
     3: ["Stitious", "Don't do anything", "Kids"]
   };
 
+  //Saves the current combination of states every time the component updates
   autoSave() {
     let current = {
       tab: this.props.activeTab,
@@ -77,7 +80,7 @@ class Tools extends PureComponent {
     let session = JSON.stringify(current);
     sessionStorage.setItem("current", session);
   }
-
+  //Returns what's in sessionStorage,
   load() {
     if (sessionStorage.getItem("current")) {
       let autosave = sessionStorage.getItem("current");
@@ -86,7 +89,7 @@ class Tools extends PureComponent {
       return { picture: 0, sound: 0, quote: 0 };
     }
   }
-
+  //Saves the current combination into localStorage when the savebutton is clicked
   save() {
     let favourite = {
       tab: this.props.activeTab,
@@ -97,6 +100,7 @@ class Tools extends PureComponent {
     let data = JSON.stringify(favourite);
     localStorage.setItem("favourite", data);
   }
+
   loadFavourite() {
     if (localStorage.getItem("favourite")) {
       let favourites = localStorage.getItem("favourite");
@@ -113,10 +117,12 @@ class Tools extends PureComponent {
     this.autoSave();
   }
   render() {
+    //Checks if the savebutton in Navbar has been clicked
     if (this.props.saveBtn) {
       this.save();
       this.props.toggleSaveBtn();
     }
+    //Checks if the loadbutton in Navbar has been clicked
     if (this.props.loadBtn) {
       this.loadFavourite();
       this.props.toggleLoadBtn();
@@ -133,8 +139,8 @@ class Tools extends PureComponent {
           />
         </div>
         <div id="pictures" className="textboxes">
-          <h2 class="h2">Photos:</h2>
-          <label class="container">
+          <h2 className="h2">Photos:</h2>
+          <label className="container">
             {this.pics[this.props.activeTab][0]}
             <input
               type="checkbox"
@@ -142,11 +148,11 @@ class Tools extends PureComponent {
               name="group 1"
               onChange={() => this.changePicture(0)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <br />
 
-          <label class="container" >
+          <label className="container">
             {this.pics[this.props.activeTab][1]}
             <input
               type="checkbox"
@@ -154,11 +160,11 @@ class Tools extends PureComponent {
               name="group 1"
               onChange={() => this.changePicture(1)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <br />
 
-          <label class="container">
+          <label className="container">
             {this.pics[this.props.activeTab][2]}
             <input
               type="checkbox"
@@ -166,12 +172,12 @@ class Tools extends PureComponent {
               name="group 1"
               onChange={() => this.changePicture(2)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
         </div>
         <div id="sounds" className="textboxes">
-          <h2 class="h2">Sounds:</h2>
-          <label class="container">
+          <h2 className="h2">Sounds:</h2>
+          <label className="container">
             {this.sounds[this.props.activeTab][0]}
             <input
               type="checkbox"
@@ -179,10 +185,10 @@ class Tools extends PureComponent {
               name="group 2"
               onChange={() => this.changeSound(0)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <br />
-          <label class="container">
+          <label className="container">
             {this.sounds[this.props.activeTab][1]}
             <input
               type="checkbox"
@@ -193,7 +199,7 @@ class Tools extends PureComponent {
             <span className="checkmark"></span>
           </label>
           <br />
-          <label class="container">
+          <label className="container">
             {this.sounds[this.props.activeTab][2]}
             <input
               type="checkbox"
@@ -201,12 +207,12 @@ class Tools extends PureComponent {
               name="group 2"
               onChange={() => this.changeSound(2)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
         </div>
         <div id="quotes" className="textboxes">
-          <h2 class="h2">Quotes:</h2>
-          <label class="container">
+          <h2 className="h2">Quotes:</h2>
+          <label className="container">
             {this.quotes[this.props.activeTab][0]}
             <input
               type="checkbox"
@@ -214,10 +220,10 @@ class Tools extends PureComponent {
               name="group 3"
               onChange={() => this.changeQuote(0)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <br />
-          <label class="container">
+          <label className="container">
             {this.quotes[this.props.activeTab][1]}
             <input
               type="checkbox"
@@ -225,10 +231,10 @@ class Tools extends PureComponent {
               name="group 3"
               onChange={() => this.changeQuote(1)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
           <br />
-          <label class="container">
+          <label className="container">
             {this.quotes[this.props.activeTab][2]}
             <input
               type="checkbox"
@@ -236,7 +242,7 @@ class Tools extends PureComponent {
               name="group 3"
               onChange={() => this.changeQuote(2)}
             />
-            <span class="checkmark"></span>
+            <span className="checkmark"></span>
           </label>
         </div>
       </div>

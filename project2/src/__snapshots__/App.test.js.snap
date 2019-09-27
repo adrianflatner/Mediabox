@@ -157,7 +157,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Chuch
+              Really Smart
               <input
                 className="checkbox"
                 name="group 2"
@@ -172,7 +172,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Grab pussy
+              Bing Bing
               <input
                 className="checkbox"
                 name="group 2"
@@ -187,7 +187,7 @@ exports[`App render matches snapshot 1`] = `
             <label
               class="container"
             >
-              Church
+              Jobs
               <input
                 className="checkbox"
                 name="group 2"

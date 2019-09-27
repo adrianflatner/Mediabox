@@ -20,6 +20,8 @@ class Navbar extends Component {
     this.setState({ tab });
   };
 
+  //Switches to keep track of button onClicks
+
   toggleSaveBtn() {
     this.setState(state => ({ saveBtn: !state.saveBtn }));
   }
@@ -27,6 +29,7 @@ class Navbar extends Component {
     this.setState(state => ({ loadBtn: !state.loadBtn }));
   }
 
+  //Loads the current tab from sessionStorage
   load() {
     if (sessionStorage.getItem("current")) {
       return JSON.parse(sessionStorage.getItem("current"))["tab"];
@@ -34,7 +37,7 @@ class Navbar extends Component {
       return 0;
     }
   }
-
+  //Triggers save() in Tools.js
   save = () => {
     this.toggleSaveBtn();
   };
@@ -58,7 +61,7 @@ class Navbar extends Component {
           Save current combination
         </button>
         <button className="Load SaveLoad" onClick={() => this.loadFavourite()}>
-          Load saved combination             
+          Load saved combination
         </button>
         <div className="grid">
           <button className="tab1" onClick={() => this.setTab(0)}>
@@ -75,7 +78,7 @@ class Navbar extends Component {
           </button>
         </div>
 
-      {/* PICTURE AND BUTTONS FOR MAKING ARTBOART */}
+        {/* PICTURE AND BUTTONS FOR MAKING ARTBOART */}
         <div className="Artboard-tools">
           <Tools
             toggleSaveBtn={this.toggleSaveBtn}

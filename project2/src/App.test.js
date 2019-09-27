@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import renderer from 'react-test-renderer';
 
+// Three simple tests to see if the page renders and loads correctly.
+
 it('renders without crashing', () => {
 	const div = document.createElement('div');
 	ReactDOM.render(<App />, div);
