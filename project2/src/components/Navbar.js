@@ -43,11 +43,14 @@ class Navbar extends Component {
   }
 
   loadFavourite = () => {
-    this.toggleLoadBtn();
-    let favTab = localStorage.getItem("favourite")
-    let tab = JSON.parse(favTab)["tab"]
-    this.setTab(tab)
-
+    if(localStorage.getItem("favourite")){
+      this.toggleLoadBtn();
+      let favTab = localStorage.getItem("favourite")
+      let tab = JSON.parse(favTab)["tab"]
+      this.setTab(tab)
+      
+    }
+    
   }
 
   render() {
